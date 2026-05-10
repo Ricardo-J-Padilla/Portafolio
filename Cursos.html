@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursos y Talleres | Ricardo Padilla</title>
+    <style>
+        /* Estilos Base (Idénticos a tu index para mantener consistencia) */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; background-color: #ffffff; color: #1a1a1a; -webkit-font-smoothing: antialiased; }
+
+        /* Barra de Navegación (Azul Marino) */
+        header { 
+            background-color: #001a33; 
+            padding: 10px 60px; 
+            display: flex; 
+            align-items: center; 
+            justify-content: space-between;
+            position: fixed;
+            width: 100%;
+            height: 65px;
+            z-index: 1000;
+            top: 0;
+        }
+        .logo-nav { display: flex; align-items: center; text-decoration: none; color: white; font-size: 14px; }
+        .logo-nav img { width: 35px; height: 35px; border-radius: 50%; margin-right: 12px; border: 1px solid rgba(255,255,255,0.5); object-fit: cover; }
+        .nav-links a { color: white; text-decoration: none; margin-left: 30px; font-size: 13px; font-weight: 400; }
+
+        /* Contenedor Principal */
+        .main-container { max-width: 1100px; margin: 0 auto; padding: 120px 20px 60px; text-align: center; }
+
+        /* Títulos de la Sección (Igual al video) */
+        .page-title { font-size: 36px; font-weight: normal; margin-bottom: 50px; color: #000; }
+        .section-subtitle { font-size: 26px; font-weight: normal; color: #b01c44; /* Color Vino/Rojo de Wix */ margin-bottom: 40px; margin-top: 60px; }
+
+        /* Cuadrícula de Certificados (2 columnas) */
+        .certificates-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+            margin-bottom: 60px;
+        }
+
+        /* Caja de Certificado Individual */
+        .certificate-item {
+            flex: 0 0 calc(50% - 15px); /* Dos columnas con gap */
+            background-color: #000; /* Fondo negro como en el video */
+            padding: 15px;
+            border-radius: 4px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+        }
+        .certificate-item:hover { transform: translateY(-5px); } /* Efecto sutil al pasar el mouse */
+
+        /* Imagen del Certificado */
+        .certificate-img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border: 1px solid #333; /* Borde sutil para separarlo del fondo negro */
+        }
+
+        /* Footer (Gris Claro) */
+        footer { background-color: #e6e6e6; padding: 60px 20px; margin-top: 50px; text-align: left; }
+        .footer-content { max-width: 1000px; margin: 0 auto; display: flex; gap: 120px; }
+        .footer-col h3 { font-size: 18px; margin-bottom: 20px; font-weight: 600; }
+        .footer-col p { font-size: 15px; margin-bottom: 8px; color: #333; }
+        .icon { font-size: 18px; margin-right: 10px; color: #001a33; }
+
+        /* Sección Contacto (Footer Azul) */
+        .contact-section { background-color: #001a33; padding: 60px 20px; text-align: center; color: white; margin-top: 50px; }
+        .contact-section h2 { font-size: 24px; margin-bottom: 40px; letter-spacing: 2px; text-transform: uppercase; }
+        .contact-info { display: flex; justify-content: center; gap: 100px; flex-wrap: wrap; max-width: 900px; margin: 0 auto; }
+        .contact-item { text-align: left; font-size: 15px; flex: 1; min-width: 250px; }
+        .contact-item p { margin: 15px 0; display: flex; align-items: center; }
+        .icon { font-size: 20px; margin-right: 15px; }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .columns-container { flex-direction: column; }
+            .column-left { width: 100%; }
+            .project-image { margin: 0 auto; }
+            header { padding: 10px 20px; }
+            .contact-info { gap: 40px; }
+            .project-hero h1 { font-size: 40px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+         <a href="index.html" class="logo-nav">
+            <img src="img/perfil.png" alt="Ricardo"> 
+            <span>Rícardo Padilla</span>
+        </a>
+        <nav class="nav-links">
+            <a href="index.html">Inicio</a>
+            <a href="cursos.html">Cursos</a>
+            <a href="acerca_de.html">Acerca de</a>
+            <a href="CV-RICARDO PADILLA.pdf" download>Curriculum</a>
+        </nav>
+    </header>
+
+    <main class="main-container">
+        
+        <h1 class="page-title">Cursos y Talleres</h1>
+
+        <h2 class="section-subtitle">Cursos</h2>
+
+        <div class="certificates-grid">
+            
+            <div class="certificate-item">
+                <img src="img/auditoria1.png" alt="Certificado Aplicación Estrategias Ciberseguridad" class="certificate-img">
+            </div>
+
+            <div class="certificate-item">
+                <img src="img/auditoria2.png" alt="Certificado Auditoría de Ciberseguridad" class="certificate-img">
+            </div>
+
+            <div class="certificate-item">
+                <img src="img/ciberseguridad1.png" alt="Certificado Aplicación Estrategias Ciberseguridad" class="certificate-img">
+            </div>
+
+            <div class="certificate-item">
+                <img src="img/ciberseguridad2.png" alt="Certificado Auditoría de Ciberseguridad" class="certificate-img">
+            </div>
+
+        </div>
+
+        <h2 class="section-subtitle">Talleres</h2>
+
+        <div class="certificates-grid">
+            
+            <div class="certificate-item">
+                <img src="img/certificado1.png" alt="Taller Rol Oficinas Atención al Ciudadano" class="certificate-img">
+            </div>
+
+            <div class="certificate-item">
+                <img src="img/certificado2.png" alt="Taller Criterios Valoración Jurídica" class="certificate-img">
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer class="contact-section">
+        <h2>Contacto</h2>
+        <div class="contact-info">
+            <div class="contact-item">
+                <p><strong>Teléfonos:</strong></p>
+                <p><span class="icon">📞</span> 0412-955.53.35</p>
+                <p><span class="icon">📞</span> 0412-777.98.86</p>
+            </div>
+            <div class="contact-item">
+                <p><strong>Correo:</strong></p>
+                <p><span class="icon">✉️</span> ricardopsj3043@gmail.com</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

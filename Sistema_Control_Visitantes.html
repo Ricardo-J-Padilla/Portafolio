@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Control de Visitantes | Ricardo Padilla</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; background-color: #ffffff; color: #1a1a1a; }
+
+        /* Barra de Navegación */
+        header { 
+            background-color: #001a33; 
+            padding: 10px 60px; 
+            display: flex; 
+            align-items: center; 
+            justify-content: space-between;
+            position: fixed;
+            width: 100%;
+            height: 65px;
+            z-index: 1000;
+        }
+        .logo-nav { display: flex; align-items: center; text-decoration: none; color: white; font-size: 14px; }
+        .logo-nav img { width: 35px; height: 35px; border-radius: 50%; margin-right: 12px; border: 1px solid rgba(255,255,255,0.5); }
+        .nav-links a { color: white; text-decoration: none; margin-left: 30px; font-size: 13px; }
+
+        /* Cabecera Azul */
+        .project-hero {
+            background-color: #001a33;
+            color: #ffffff;
+            text-align: center;
+            padding: 150px 20px 100px;
+        }
+        .project-hero span { font-size: 50px; font-weight: 300; display: block; }
+        .project-hero h1 { font-size: 65px; font-weight: 400; letter-spacing: -1px; }
+
+        /* Contenedor General */
+        .main-container { max-width: 1000px; margin: 0 auto; padding: 60px 20px; }
+        
+        .section-title { font-size: 24px; font-weight: normal; margin: 40px 0 25px; }
+        .text-p { font-size: 16px; line-height: 1.8; margin-bottom: 20px; text-align: justify; }
+
+        /* SECCIÓN DE DOS COLUMNAS (Imagen izquierda, texto derecha) */
+        .columns-container {
+            display: flex;
+            gap: 40px;
+            align-items: flex-start;
+            margin: 40px 0;
+        }
+        .column-left { flex: 1.2; }
+        .column-right { flex: 1; }
+
+        .project-image {
+            width: 100%;
+            border: 1px solid #000;
+            display: block;
+        }
+
+        /* Estilo de listas */
+        ul { list-style: disc; margin-left: 20px; margin-bottom: 20px; }
+        li { font-size: 15px; margin-bottom: 15px; line-height: 1.6; }
+
+        /* Footer */
+        footer { background-color: #e6e6e6; padding: 60px 20px; margin-top: 50px; }
+        .footer-content { max-width: 1000px; margin: 0 auto; display: flex; gap: 100px; }
+        .footer-col h3 { font-size: 18px; margin-bottom: 20px; }
+         
+         /* Sección Contacto */
+        .contact-section { background-color: #001a33; padding: 60px 20px; text-align: center; color: white; }
+        .contact-section h2 { font-size: 24px; margin-bottom: 40px; letter-spacing: 2px; text-transform: uppercase; }
+        .contact-info { display: flex; justify-content: center; gap: 100px; flex-wrap: wrap; max-width: 900px; margin: 0 auto; }
+        .contact-item { text-align: left; font-size: 15px; flex: 1; min-width: 250px; }
+        .contact-item p { margin: 15px 0; display: flex; align-items: center; }
+        .icon { font-size: 20px; margin-right: 15px; color: #3498db; }
+        
+        /* Responsive para móviles */
+        @media (max-width: 768px) {
+            header { padding: 10px 20px; }
+            .nav-links a { margin-left: 15px; font-size: 12px; }
+            h1 { font-size: 28px; letter-spacing: 3px; }
+            .contact-info { gap: 40px; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo-nav">
+            <img src="img/perfil.png" alt="Ricardo"> 
+            <span>Rícardo Padilla</span>
+        </a>
+        <nav class="nav-links">
+            <a href="index.html">Inicio</a>
+            <a href="cursos.html">Cursos</a>
+            <a href="acerca_de.html">Acerca de</a>
+            <a href="CV-RICARDO PADILLA.pdf" download>Curriculum</a>
+        </nav>
+    </header>
+
+    <section class="project-hero">
+        <span>Proyecto :</span>
+        <h1>Sistema de Control de Visitantes</h1>
+    </section>
+
+    <main class="main-container">
+        <h2 class="section-title">¿Qué es el Sistema?</h2>
+        <p class="text-p">El Sistema de Control de Visitantes (SCV) es una aplicación de escritorio diseñada para la Contraloría del Estado Carabobo, cuyo objetivo principal es digitalizar y optimizar la gestión del flujo de personas que ingresan y salen de las instalaciones.</p>
+        <p class="text-p">Desarrollado en NetBeans (Java) y vinculado a una base de datos MySQL gestionada mediante phpMyAdmin, el sistema centraliza la información de acceso, reemplazando los registros manuales en papel.</p>
+        
+        <p class="text-p">Sus funcionalidades clave incluyen:</p>
+        <ul>
+            <li><strong>Gestión CRUD:</strong> Permite el registro rápido y la actualización de los datos personales de los visitantes.</li>
+            <li><strong>Control de Acceso:</strong> Registra la hora de entrada, la oficina de destino y la hora de salida de cada persona.</li>
+            <li><strong>Generación de Historiales:</strong> Facilita la consulta de registros históricos de visitas.</li>
+        </ul>
+
+        <h2 class="section-title">¿Por qué se Realizó? (Objetivos y Necesidad)</h2>
+        
+        <div class="columns-container">
+            <div class="column-left">
+                <img src="img/hh.png" alt="Captura del Sistema" class="project-image">
+            </div>
+            <div class="column-right">
+                <ul>
+                    <li><strong>Necesidad de Seguridad y Trazabilidad:</strong> Los registros en papel dificultaban la identificación rápida de quién estaba dentro de las instalaciones en un momento dado, representando un riesgo de seguridad.</li>
+                    <li><strong>Optimización de Procesos:</strong> Eliminar el uso de libros y planillas manuales redujo los tiempos de espera en la entrada y minimizó los errores humanos.</li>
+                    <li><strong>Auditoría y Reporte:</strong> Se buscaba la capacidad de generar de manera instantánea y precisa un historial de visitas por oficina.</li>
+                </ul>
+            </div>
+        </div>
+
+        <h2 class="section-title">¿Cómo se Implementó? (Metodología Técnica)</h2>
+        <p class="text-p">La implementación se centró en la creación de una arquitectura robusta:</p>
+        <ol style="margin-left: 20px; margin-bottom: 30px;">
+            <li style="margin-bottom: 10px;"><strong>Fase de Análisis:</strong> Elicitación de requerimientos con el personal de seguridad.</li>
+            <li style="margin-bottom: 10px;"><strong>Desarrollo de Software:</strong> Uso de NetBeans y Java para la interfaz gráfica (GUI).</li>
+            <li style="margin-bottom: 10px;"><strong>Gestión de Base de Datos:</strong> Diseño relacional en MySQL gestionado vía phpMyAdmin.</li>
+            <li style="margin-bottom: 10px;"><strong>Conexión y Pruebas:</strong> Implementación de JDBC y pruebas funcionales.</li>
+        </ol>
+
+        <h2 class="section-title">Conclusión</h2>
+        <p class="text-p">El Sistema de Control de Visitantes fue implementado con éxito, logrando un impacto inmediato al transformar un proceso manual y propenso a errores en una operación digital, rápida y auditable.</p>
+    </main>
+
+    <footer class="contact-section">
+        <h2>Contacto</h2>
+        <div class="contact-info">
+            <div class="contact-item">
+                <p><strong>Teléfonos:</strong></p>
+                <p><span class="icon">📞</span> 0412-955.53.35</p>
+                <p><span class="icon">📞</span> 0412-777.98.86</p>
+            </div>
+            <div class="contact-item">
+                <p><strong>Correo:</strong></p>
+                <p><span class="icon">✉️</span> ricardopsj3043@gmail.com</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

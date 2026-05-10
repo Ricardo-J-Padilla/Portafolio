@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recuperación de Red | Ricardo Padilla</title>
+    <style>
+        /* Reset y Base */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; background-color: #ffffff; color: #1a1a1a; line-height: 1.6; }
+
+        /* Barra de Navegación */
+        header { 
+            background-color: #001a33; 
+            padding: 10px 60px; 
+            display: flex; 
+            align-items: center; 
+            justify-content: space-between;
+            position: fixed;
+            width: 100%;
+            height: 65px;
+            z-index: 1000;
+            top: 0;
+        }
+        .logo-nav { display: flex; align-items: center; text-decoration: none; color: white; font-size: 14px; }
+        .logo-nav img { width: 35px; height: 35px; border-radius: 50%; margin-right: 12px; border: 1px solid rgba(255,255,255,0.5); object-fit: cover; }
+        .nav-links a { color: white; text-decoration: none; margin-left: 30px; font-size: 13px; }
+
+        /* Cabecera Azul */
+        .project-hero {
+            background-color: #001a33;
+            color: #ffffff;
+            text-align: center;
+            padding: 160px 20px 100px;
+        }
+        .project-hero span { font-size: 50px; font-weight: 300; display: block; margin-bottom: 5px; }
+        .project-hero h1 { font-size: 65px; font-weight: 400; letter-spacing: -1px; margin: 0; }
+
+        /* Contenedor General */
+        .main-container { max-width: 1000px; margin: 0 auto; padding: 60px 20px; }
+        
+        .section-title { font-size: 24px; font-weight: normal; margin: 40px 0 25px; color: #000; border-bottom: 1px solid #eee; padding-bottom: 10px; }
+        .text-p { font-size: 16px; line-height: 1.8; margin-bottom: 20px; text-align: justify; }
+
+        /* SECCIÓN DE DOS COLUMNAS (Texto Izquierda, Imagen Derecha) */
+        .columns-container {
+            display: flex;
+            gap: 50px;
+            align-items: flex-start;
+            margin: 40px 0;
+        }
+        .column-right { flex: 1.6; } /* El texto ocupa más espacio */
+        .column-left { flex: 0.8; }  /* La imagen es más pequeña */
+
+        .project-image {
+            width: 100%;
+            max-width: 320px; /* Limita el tamaño para evitar espacios blancos */
+            border: 1px solid #000;
+            display: block;
+            margin-left: auto; /* La pega a la derecha */
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        /* Estilo de listas */
+        ul, ol { margin-left: 25px; margin-bottom: 20px; }
+        li { font-size: 15px; margin-bottom: 12px; line-height: 1.6; }
+        .metodologia-sub { margin-top: 10px; list-style-type: circle; }
+
+        /* Sección Contacto (Footer Azul) */
+        .contact-section { background-color: #001a33; padding: 60px 20px; text-align: center; color: white; margin-top: 50px; }
+        .contact-section h2 { font-size: 24px; margin-bottom: 40px; letter-spacing: 2px; text-transform: uppercase; }
+        .contact-info { display: flex; justify-content: center; gap: 100px; flex-wrap: wrap; max-width: 900px; margin: 0 auto; }
+        .contact-item { text-align: left; font-size: 15px; flex: 1; min-width: 250px; }
+        .contact-item p { margin: 15px 0; display: flex; align-items: center; }
+        .icon { font-size: 20px; margin-right: 15px; }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .columns-container { flex-direction: column; }
+            .column-left { width: 100%; }
+            .project-image { margin: 0 auto; }
+            header { padding: 10px 20px; }
+            .contact-info { gap: 40px; }
+            .project-hero h1 { font-size: 40px; }
+        }
+/* Clase específica para los puntos de Diagnóstico */
+.lista-diagnostico li {
+    font-size: 15px;        /* Texto más grande */
+    margin-bottom: 15px;    /* Más espacio entre párrafos */
+    line-height: 1.7;       /* Mejora la lectura */
+    text-align: justify;    /* Alineación limpia */
+    list-style-position: outside; /* Asegura que la viñeta no se mueva */
+}
+
+.lista-diagnostico li strong {
+    font-size: 20px;        /* Resalta un poco más las negritas */
+    display: inline-block;  /* Da un poco más de cuerpo al título */
+    margin-bottom: 5px;
+}
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo-nav">
+            <img src="img/perfil.png" alt="Ricardo"> 
+            <span>Rícardo Padilla</span>
+        </a>
+        <nav class="nav-links">
+            <a href="index.html">Inicio</a>
+            <a href="cursos.html">Cursos</a>
+            <a href="acerca_de.html">Acerca de</a>
+            <a href="CV-RICARDO PADILLA.pdf" download>Curriculum</a>
+        </nav>
+    </header>
+
+    <section class="project-hero">
+        <span>Proyecto</span>
+        <h1>Recuperación e Implementación del Sistema de Correo Interno ZIMBRACríticos</h1>
+    </section>
+
+    <main class="main-container">
+        <h2 class="section-title">¿Qué es el Proyecto?</h2>
+
+        <p class="text-p">El proyecto consistió en la recuperación, reinstalación y puesta en marcha del servidor de correo electrónico interno Zimbra Collaboration Suite para la Contraloría del Estado Carabobo. Zimbra es una plataforma de comunicación unificada que provee servicios de correo electrónico profesional, calendario compartido y lista global de contactos para todos los empleados de la institución.</p>
+        <ul class="lista-diagnostico">
+            <li><strong>Tecnología Principal:</strong> Zimbra Collaboration Suite (Servidor Linux).</li>
+            <li><strong>Propósito:</strong> Garantizar la continuidad operativa y la seguridad de las comunicaciones internas oficiales.</li>
+            <li><strong>Funcionalidad Clave:</strong> Proveer cuentas de correo con dominio institucional, gestión de buzones, antispam, antivirus y acceso web/móvil seguro.</li>
+        </ul>
+
+        <h2 class="section-title">¿Por qué se Realizó? (Objetivos y Desafios)</h2>
+        <div class="columns-container">
+            <div class="column-right">
+                <p class="text-p">El proyecto fue crítico y se realizó debido a una falla total o degradación del sistema de correo anterior, lo que paralizó las comunicaciones oficiales de la Contraloría.</p>
+                <ul class="lista-diagnostico">
+                    <li><strong>Objetivo Principal:</strong> Restablecer el servicio de correo en el menor tiempo posible para garantizar la operatividad de la institución.</li>
+                    <li><strong>Desafío Clave:</strong> Recuperación de datos y migración (si aplicó) o instalación limpia bajo nuevos estándares de seguridad y rendimiento.</li>
+                    <li><strong>Necesidad Estratégica:</strong> Asegurar que un sistema de comunicación tan vital no dependiera de servicios externos, manteniendo la soberanía y control sobre la información institucional.</li>
+                </ul>
+            </div>
+            <div class="column-left">
+                <img src="img/Zimbra1.png" alt="Rack" class="project-image">
+            </div>
+        </div>
+
+        <h2 class="section-title">¿Cómo se Implementó? (Metodología Técnica)</h2>
+        <p class="text-p">La implementación se abordó como un proyecto de infraestructura crítica, siguiendo fases rigurosas:</p>
+        
+        <ol>
+            <li><strong>Fase I Análisis y Planificación de Recuperación:</strong>
+                Análisis y Planificación de Recuperación:Diagnóstico de la falla del sistema anterior y evaluación de la infraestructura de hardware disponible.Definición de la arquitectura del nuevo servidor Zimbra (configuración de la memoria, almacenamiento y red).
+            </li>
+            <li><strong>Fase II Instalación y Configuración del Servidor:</strong>
+                Instalación del Sistema Operativo base (generalmente Linux: CentOS/Ubuntu).Instalación y configuración de la suite Zimbra, incluyendo la puesta a punto de servicios críticos como SMTP, IMAP/POP3, DNS y el servidor web.Configuración de políticas de seguridad (firewall, antispam, antivirus).
+            </li>
+            <li><strong>Fase III Configuración de Usuarios y Pruebas:</strong>
+                Creación masiva y/o migración de las cuentas de usuario.Implementación del Directorio Activo (LDAP) para la autenticación centralizada.Realización de pruebas de envío y recepción masivas y pruebas de estrés para asegurar el rendimiento.
+            </li>
+            <li><strong>Fase IV Puesta en Producción y Documentación:</strong>
+                Liberación del servicio a todos los usuarios y capacitación al personal de TI.Documentación completa del proceso de instalación, configuración y los procedimientos de backup y restauración.
+            </li>
+        </ol>
+
+        <h2 class="section-title">Conclusión</h2>
+        <p class="text-p">La exitosa recuperación e implementación del servidor Zimbra resultó en el restablecimiento completo de las comunicaciones institucionales. El nuevo sistema opera con mayor estabilidad y seguridad que su predecesor.</p>
+       <img src="img/zimbra-panel.png" alt="Rack" ">
+ </main>
+
+    <footer class="contact-section">
+        <h2>Contacto</h2>
+        <div class="contact-info">
+            <div class="contact-item">
+                <p><strong>Teléfonos:</strong></p>
+                <p><span class="icon">📞</span> 0412-955.53.35</p>
+                <p><span class="icon">📞</span> 0412-777.98.86</p>
+            </div>
+            <div class="contact-item">
+                <p><strong>Correo:</strong></p>
+                <p><span class="icon">✉️</span> ricardopsj3043@gmail.com</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
